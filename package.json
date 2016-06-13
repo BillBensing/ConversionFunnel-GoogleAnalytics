@@ -1,0 +1,57 @@
+{
+  "name": "angluar1-webpack-starter",
+  "version": "1.0.0",
+  "description": "A simple Angular1 starter app using Webpack as the build tool.",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server -d --inline",
+    "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BillBensing/Angular1-Webpack-Starter.git"
+  },
+  "keywords": [
+    "angular",
+    "angluar1",
+    "1.0",
+    "starter",
+    "webpack"
+  ],
+  "author": "Bill Bensing <bill@billbensing.com> (http://www.billbensing.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/BillBensing/Angular1-Webpack-Starter/issues"
+  },
+  "homepage": "https://github.com/BillBensing/Angular1-Webpack-Starter#readme",
+  "devDependencies": {
+    "angular": "1.5.6",
+    "angular-ui-router": "^0.3.1",
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.15.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-jasmine": "^0.3.8",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^1.7.0",
+    "material-design-lite": "^1.1.3",
+    "null-loader": "^0.1.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.0.0",
+    "strip-json-comments": "^1.0.4",
+    "strip-loader": "^0.1.0",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "webpack-material-design-icons": "0.0.2",
+    "webpack-merge": "^0.9.0"
+  }
+}
