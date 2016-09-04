@@ -7,11 +7,19 @@ var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 var app = angular.module("app", [uiRouter]);
 
-app.run(function ($rootScope, $timeout) {
+app.run(function ($rootScope, $timeout, $location, $window) {
+
+  // Makes sure all Material Design is loaded on page chagnes.
   $rootScope.$on('$viewContentLoaded', function () {
     $timeout(function () {
       componentHandler.upgradeAllRegistered();
     });
+  })
+
+  // Send pageview to Google Analytics when a route is changed
+  $rootScope.$on('$stateChangeSuccess', function (event) {
+    if (!$window.ga) { return; }
+    $window.ga('send', 'pageview', { page: $location.path() });
   });
 });
 
