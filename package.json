@@ -5,8 +5,11 @@
   "main": "app.js",
   "scripts": {
     "server": "webpack-dev-server -d --inline",
-    "start": "webpack --config config/webpack.prod.js --progress --profile --bail",
-    "test": "test"
+    "test": "test",
+    "prestart": "npm run build",
+    "start": "node index.js",
+    "start:prod": "npm run build && NODE_PATH=\"./src\" NODE_ENV=\"production\" PORT=\"8080\" node index.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
