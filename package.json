@@ -2,7 +2,7 @@
   "name": "angluar1-webpack-starter",
   "version": "1.0.0",
   "description": "A simple Angular1 starter app using Webpack as the build tool.",
-  "main": "app.js",
+  "main": "./src/app.js",
   "scripts": {
     "server": "webpack-dev-server -d --inline",
     "test": "test",
