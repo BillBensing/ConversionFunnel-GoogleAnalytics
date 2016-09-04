@@ -7,12 +7,12 @@ var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 var app = angular.module("app", [uiRouter]);
 
-app.run(function ($rootScope,$timeout) {
-        $rootScope.$on('$viewContentLoaded', ()=> {
-          $timeout(() => {
-            componentHandler.upgradeAllRegistered();
-          })
-        })
+app.run(function ($rootScope, $timeout) {
+  $rootScope.$on('$viewContentLoaded', function () {
+    $timeout(function () {
+      componentHandler.upgradeAllRegistered();
+    });
+  });
 });
 
 /*

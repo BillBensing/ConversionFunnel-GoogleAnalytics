@@ -8,8 +8,8 @@
     "test": "test",
     "prestart": "npm run build",
     "start": "node ./src/app.js",
-    "start:prod": "npm run build && NODE_PATH=\"./src\" NODE_ENV=\"production\" PORT=\"8080\" node index.js",
-    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config config/webpack.prod.js"
+    "start:prod": "npm run build && NODE_PATH=\"./src\" NODE_ENV=\"production\" PORT=\"8080\" node ./src/app.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js --verbose --colors --display-error-details --config ./config/webpack.prod.js"
   },
   "repository": {
     "type": "git",
