@@ -4,8 +4,8 @@
   "description": "A simple Angular1 starter app using Webpack as the build tool.",
   "main": "app.js",
   "scripts": {
-    "start": "webpack-dev-server -d --inline",
-    "build": "webpack --config config/webpack.prod.js --progress --profile --bail",
+    "server": "webpack-dev-server -d --inline",
+    "start": "webpack --config config/webpack.prod.js --progress --profile --bail",
     "test": "test"
   },
   "repository": {
