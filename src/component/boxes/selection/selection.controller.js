@@ -7,7 +7,7 @@ module.exports = function (ngModule) {
         };
 
         vm.$watchGroup(['order.small.qty','order.medium.qty','order.large.qty'], function(newValues, oldValues, scope) {
-            vm.order.calculate();
+            Order.CalculateOrderTotal();
         });
 
     }]);
