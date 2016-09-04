@@ -117,6 +117,15 @@ if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
   echo npm build
   eval $NPM_CMD run build
 
+  # Delete copied files
+  del /q %DEPLOYMENT_TARGET%\*
+  for /d %%x in (%DEPLOYMENT_TARGET%\*) do @rd /s /q "%%x"
+
+  #Copy contents of dist to wwwroot
+  xcopy %DEPLOYMENT_SOURCE%\dist %DEPLOYMENT_TARGET% /Y /E 
+
+
+
   exitWithMessageOnError "npm failed"
   cd - > /dev/null
 fi
