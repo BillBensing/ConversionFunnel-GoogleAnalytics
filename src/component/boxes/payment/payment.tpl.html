@@ -1,0 +1,90 @@
+<div class="android-more-section">
+    <div class="android-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Your Address</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%">
+                    <input id="AddressLine1" class="mdl-textfield__input" type="text" ng-model="order.address.line1">
+                    <label class="mdl-textfield__label" for="AddressLine1">Address Line 1</label>
+                    <span class="mdl-textfield__error">Something is fishy with what you entered.</span>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%">
+                    <input id="AddressLine2" class="mdl-textfield__input" type="text" ng-model="order.address.line2">
+                    <label class="mdl-textfield__label" for="AddressLine2">Address Line 2</label>
+                    <span class="mdl-textfield__error">Something is fishy with what you entered.</span>
+                </div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label">
+                        <input id="Zipcode" class="mdl-textfield__input" type="text" ng-model="order.city">
+                        <label class="mdl-textfield__label" for="City">City</label>
+                        <span class="mdl-textfield__error">Something is fishy wit your Zipcode</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 50px;">
+                        <input id="Zipcode" class="mdl-textfield__input" type="text" ng-model="order.state">
+                        <label class="mdl-textfield__label" for="State">State</label>
+                        <span class="mdl-textfield__error">Something is fishy wit your Zipcode</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 75px;">
+                        <input id="Zipcode" class="mdl-textfield__input" type="text" ng-model="order.zip ">
+                        <label class="mdl-textfield__label" for="Zipcode">Zipcode</label>
+                        <span class="mdl-textfield__error">Something is fishy wit your Zipcode</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Payment Info</h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%" pattern="^[a-zA-Z\s]*$" type="text" maxlength="50">
+                    <input id="Name" class="mdl-textfield__input">
+                    <label class="mdl-textfield__label" for="Name">Name</label>
+                    <span class="mdl-textfield__error">A Name can only be Letters.</span>
+                </div>
+                <div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 200px;" pattern="^4[0-9]{12}(?:[0-9]{3})?$" type="text" maxlength="19">
+                        <input id="CardNumber" class="mdl-textfield__input" type="text">
+                        <label class="mdl-textfield__label" for="CardNumber">Card Number</label>
+                        <span class="mdl-textfield__error">Something is fishy with what you entered.</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 50px;" type="text" maxlength="4">
+                        <input id="CardNumber" class="mdl-textfield__input" type="text">
+                        <label class="mdl-textfield__label" for="CardNumber">CCV</label>
+                        <span class="mdl-textfield__error">Not a proper CCV</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="mdl-select mdl-js-select mdl-select--floating-label" style="max-width: 125px;">
+                        <select class="mdl-select__input" id="ExpiredMonth">
+                            <option value=""></option>
+                            <option value="option1">01 - January</option>
+                            <option value="option2">02 - Feburary</option>
+                            <option value="option3">03 - March</option>
+                            <option value="option4">04 - April</option>
+                            <option value="option5">05 - May</option>
+                            </select>
+                        <label class="mdl-select__label" for="ExpiredMonth">Expired Month</label>
+                    </div>
+                    <div class="mdl-select mdl-js-select mdl-select--floating-label" style="max-width: 125px;">
+                        <select class="mdl-select__input" id="ExpiredYear">
+                            <option value=""></option>
+                            <option value="option1">2016</option>
+                            <option value="option2">2017</option>
+                            <option value="option3">2018</option>
+                            <option value="option4">2019</option>
+                            <option value="option5">2020</option>
+                            </select>
+                        <label class="mdl-select__label" for="ExpiredYear">Expired Year</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <span><a href="" class="mdl-button mdl-button--raised" style="float: right;" ng-click="ProcessPayment()">Place Order</a></span>
+</div>

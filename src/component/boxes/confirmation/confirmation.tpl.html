@@ -1,0 +1,18 @@
+<h1>We can hear your Freedom a-knockin'</h1>
+<div>
+    <p>
+        Your order will be delivered to {{ order.zip }} on {{ order.date }} between 8:00 AM and 12:00 PM.
+    </p>
+
+    <div>
+        <div ng-if="order.small.qty > 0">{{order.small.qty}}x Small Boxes<br /></div>
+        <div ng-if="order.medium.qty > 0">{{order.medium.qty}}x Medium Boxes<br /></div>
+        <div ng-if="order.large.qty > 0">{{order.large.qty}}x Large Boxes<br /> </div>
+        <br /> 
+    </div>
+
+    <p>
+        Be sure create an account so you can track and update your order!
+    </p>
+
+</div>

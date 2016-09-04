@@ -1,0 +1,80 @@
+<div class="android-content">
+    <div class="android-be-together-section mdl-typography--text-center">
+
+        <div class="android-card-container mdl-grid">
+            <div ng-if="!$state.is('boxes.confirmation')" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" style="background-color: rgba(265,265,265,.9);"> 
+                <div class="mdl-card__media">
+                    <h1>Your Order</h1>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width: 100%;">
+                        <thead>
+                            <tr>
+                                <th class="mdl-data-table__cell--non-numeric">Boxes</th>
+                                <th>Quantity</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Small</td>
+                                <td>{{ order.small.qty}}</td>
+                                <td>{{ order.small.subtotal | currency}}</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Medium</td>
+                                <td>{{ order.medium.qty}}</td>
+                                <td>{{ order.medium.subtotal | currency}}</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Large</td>
+                                <td>{{ order.large.qty}}</td>
+                                <td>{{ order.large.subtotal | currency}}</td>
+                            </tr>
+                            <tr>
+                                <td class="mdl-data-table__cell--non-numeric">Delivery</td>
+                                <td>{{ order.delivery.qty}}</td>
+                                <td>{{ order.delivery.subtotal | currency}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span style="float: left">
+            </span>
+                    <span style="float: right"><h3>Total<br><small>{{ order.total | currency }}</small></h3></span>
+                </div>
+            </div>
+
+            <div ng-if="$state.is('boxes.confirmation')" class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" style="background-color: rgba(265,265,265,.9);">
+                <div class="mdl-card__media">
+                    <h1>Perfect!</h1>
+                </div>
+                <div class="mdl-card__supporting-text">
+                    <p>Create an account to track your order!</p>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%">
+                        <input id="AddressLine1" class="mdl-textfield__input " type="text" ng-model="order.email">
+                        <label class="mdl-textfield__label" for="Email">Email</label>
+                        <span class="mdl-textfield__error">Something is fishy with what you entered.</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%">
+                        <input id="AddressLine2" class="mdl-textfield__input" type="password" ng-model="order.address.line2">
+                        <label class="mdl-textfield__label" for="AddressLine2">Password</label>
+                        <span class="mdl-textfield__error">Your need a stronger password</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 100%">
+                        <input id="AddressLine2" class="mdl-textfield__input" type="password" ng-model="order.address.line2">
+                        <label class="mdl-textfield__label" for="AddressLine2">Confirm Password</label>
+                        <span class="mdl-textfield__error">Your passwords do not match.</span>
+                    </div>
+                    <span><a href="" class="mdl-button mdl-button--raised" style="float: right;" ng-click="CreateAccount()">Create Account</a></span>
+                </div>
+            </div>
+
+            <div class="mdl-cell mdl-cell--9-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp" style="background-color: rgba(265,265,265,.9);">
+                <!--<div class="mdl-card__supporting-text">-->
+                <!-- Subview Goes Here -->
+                <ui-view></ui-view>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</div>

@@ -21,8 +21,14 @@ module.exports = {
         loader: 'html'
       },
       {
-        test: /\.(png|jpe?g|gif|svg|woff|woff2|ttf|eot|ico)$/,
-        loader: 'file?name=assets/[name].[hash].[ext]'
+        // remove png|jpe?g|gif|svg| from test
+        test: /\.(woff|woff2|ttf|eot|ico)$/,
+        loader: 'file?name=[name].[hash].[ext]'
+      },
+      {
+        //IMAGE LOADER
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader:'file'
       },
       {
         test: /\.css$/,

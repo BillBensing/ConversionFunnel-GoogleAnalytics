@@ -3,7 +3,7 @@ module.exports = function (ngModule) {
         function ($urlRouterProvider, $locationProvider, $stateProvider) {
 
             //$locationProvider.html5Mode(true);
-            $urlRouterProvider.otherwise('landing/index');
+            $urlRouterProvider.otherwise('landing');
 
             $stateProvider
                 .state('landing', {
@@ -11,20 +11,35 @@ module.exports = function (ngModule) {
                     template: require('../component/landing/landing.tpl.html'),
                     controller: 'LandingController'
                 })
-                .state('landing.index', {
-                    url: '/index',
-                    template: require('../component/landing/content/landing-content.tpl.html'),
-                    controller: 'LandingContentController'
+                .state('boxes', {
+                    url: '/boxes',
+                    template: require('../component/boxes/boxes.tpl.html'),
+                    controller: 'BoxesController'
                 })
-                .state('landing.newAccount', {
-                    url: '/new-account',
-                    template: require('../component/landing/new-account/new-account.tpl.html'),
-                    controller: 'NewAccountController'
+                .state('boxes.selection', {
+                    url: '/selection',
+                    template: require('../component/boxes/selection/selection.tpl.html'),
+                    controller: 'BoxesSelectionController'
                 })
-                .state('landing.newAccountConfirmation', {
-                    url: '/new-account/confirmation',
-                    template: require('../component/landing/new-account/confirmation/confirmation.tpl.html'),
-                    controller: 'NewAccountConfirmationController'
+                .state('boxes.payment', {
+                    url: '/payment',
+                    template: require('../component/boxes/payment/payment.tpl.html'),
+                    controller: 'BoxesPaymentController'
+                })
+                .state('boxes.confirmation', {
+                    url: '/confirmation',
+                    template: require('../component/boxes/confirmation/confirmation.tpl.html'),
+                    controller: 'BoxesConfirmationController'
+                })
+                .state('account', {
+                    url: '/account',
+                    template: require('../component/account/account.tpl.html'),
+                    controller: 'AccountController'
+                })
+                .state('account.login', {
+                    url: '/login',
+                    template: require('../component/account/login/login.tpl.html'),
+                    controller: 'AccountLoginController'
                 });
         }]);
 };

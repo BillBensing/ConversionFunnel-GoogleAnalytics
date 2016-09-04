@@ -1,0 +1,63 @@
+<div class="android-more-section">
+    <div class="android-card-container mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__media">
+                <img src="../../../core/images/you-order.png">
+            </div>
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Small Box &nbsp;<small>{{order.small.price | currency }}/mo.</small></h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 50px;">
+                    <input id="SmallQty" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="order.small.qty">
+                    <label class="mdl-textfield__label" for="SmallQty">Qty.</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                <span class="mdl-typography--font-light mdl-typography--subhead">
+                        <p>Holds about 20x Folder t-shirts.</p>
+                 </span>
+            </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__media">
+                <img src="../../../core/images/we-deliver.png">
+            </div>
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Medium Box &nbsp;<small>{{order.medium.price | currency }}/mo.</small></h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 50px;">
+                    <input id="MediumQty" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="order.medium.qty">
+                    <label class="mdl-textfield__label" for="MediumQty">Qty.</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                                <span class="mdl-typography--font-light mdl-typography--subhead">
+                        <p>Holds about 50x Folder t-shirts.</p>
+                 </span>
+            </div>
+        </div>
+
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+            <div class="mdl-card__media">
+                <img src="../../../core/images/you-pack.png">
+            </div>
+            <div class="mdl-card__title">
+                <h4 class="mdl-card__title-text">Large Box &nbsp;<small>{{order.large.price | currency }}/mo.</small></h4>
+            </div>
+            <div class="mdl-card__supporting-text">
+                <div class="mdl-textfield mdl-js-textfield  mdl-textfield--floating-label" style="width: 50px;">
+                    <input id="LargeQty" class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" ng-model="order.large.qty">
+                    <label class="mdl-textfield__label" for="LargQty">Qty.</label>
+                    <span class="mdl-textfield__error">Input is not a number!</span>
+                </div>
+                                <span class="mdl-typography--font-light mdl-typography--subhead">
+                        <p>Holds about 100x Folder t-shirts.</p>
+                 </span>
+            </div>
+        </div>
+    </div>
+
+    <span><a href="" class="mdl-button mdl-button--raised" style="float: right;" ng-click="PaymentInformation()">Place Order</a></span>
+
+</div>

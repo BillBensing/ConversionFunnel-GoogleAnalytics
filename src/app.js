@@ -7,6 +7,14 @@ var angular = require('angular');
 var uiRouter = require('angular-ui-router');
 var app = angular.module("app", [uiRouter]);
 
+app.run(function ($rootScope,$timeout) {
+        $rootScope.$on('$viewContentLoaded', ()=> {
+          $timeout(() => {
+            componentHandler.upgradeAllRegistered();
+          })
+        })
+});
+
 /*
     Import the apps dependencies such as controllers, directives, services and factories
     NOTE: You will need to pass in the a parameter of "app" (or whatever variable name you
