@@ -28,7 +28,7 @@
     "url": "https://github.com/BillBensing/Angular1-Webpack-Starter/issues"
   },
   "homepage": "https://github.com/BillBensing/Angular1-Webpack-Starter#readme",
-  "devDependencies": {
+  "dependencies": {
     "angular": "1.5.6",
     "angular-ui-router": "^0.3.1",
     "babel-core": "^5.8.25",
