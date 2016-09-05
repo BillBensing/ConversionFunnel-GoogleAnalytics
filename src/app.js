@@ -5,7 +5,7 @@
 /* Import Angular and the angular app route configuration file */
 var angular = require('angular');
 var uiRouter = require('angular-ui-router');
-var app = angular.module("app", [uiRouter]);
+var app = angular.module("app", ["ui.router"]);
 
 app.run(function ($rootScope, $timeout, $location, $window) {
 
