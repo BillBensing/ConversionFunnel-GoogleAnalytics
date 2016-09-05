@@ -1,10 +1,11 @@
 module.exports = function (ngModule) {
     ngModule.factory('GoogleAnalyticsEcommerce', ['GAEcommTransaction', 'GAEcommItem', '$window', function (Transaction, Item, $window) {
 
-        var _ecommAddTrans = "ecommerce:addTransaction";
-        var _ecommAddItem = "ecommerce:addItem";
-        var _ecommSend = "ecommerce:send";
-        var _transAffil = "WePackIt Website"
+        var _ecommAddTrans = 'ecommerce:addTransaction';
+        var _ecommAddItem = 'ecommerce:addItem';
+        var _ecommSend = 'ecommerce:send';
+        var _ecommClear = 'ecommerce:clear';
+        var _transAffil = 'WePackIt Website';
 
         var GoogleAnalytics = function () {
             this.items = [];
@@ -40,7 +41,8 @@ module.exports = function (ngModule) {
         };
 
         function ExecuteTransaction(){
-            var resp = $window.ga(_ecommSend);
+            $window.ga(_ecommSend);
+            $window.ga(_ecommClear);
         };
         return GoogleAnalytics;
     }]);
