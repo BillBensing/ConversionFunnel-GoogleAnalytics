@@ -5,8 +5,8 @@ module.exports = function (ngModule) {
             this.name = name;
             this.sku = sku;
             this.category = category;
-            this.price = price;
-            this.qty = qty;
+            this.price = price.toString();
+            this.quantity = qty.toString();
         };
         return GAEcommItem;
     }]);

@@ -3,9 +3,9 @@ module.exports = function (ngModule) {
         var GAEcommTransaction = function(id, affiliation, revenue, shipping, tax){
             this.id = id; 
             this.affiliation = affiliation;
-            this.revenue = revenue;
-            this.shipping = shipping;
-            this.tax = tax;
+            this.revenue = revenue.toString();
+            this.shipping = shipping.toString();
+            this.tax = tax.toString();
         }
         return GAEcommTransaction;
     }]);

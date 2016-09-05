@@ -29,18 +29,18 @@ module.exports = function (ngModule) {
             ExecuteTransaction();
         };
 
-        function MarshalTransaction(transaction){
-            $window.ga(_ecommAddTrans, transaction);
+        function MarshalTransaction(transaction){           
+            $window.ga(_ecommAddTrans, JSON.stringify(transaction));
         };
 
         function MarshalItems(items){
             for(var i=0; i<items.length; i++){
-                $window.ga(_ecommAddItem, items[i]);
+                $window.ga(_ecommAddItem, JSON.stringify(items[i]));
             };
         };
 
         function ExecuteTransaction(){
-            $window.ga(_ecommSend);
+            var resp = $window.ga(_ecommSend);
         };
         return GoogleAnalytics;
     }]);
@@ -50,7 +50,7 @@ module.exports = function (ngModule) {
             return Math.floor((1 + Math.random()) * 0x10000)
                 .toString(16)
                 .substring(1);
-        }
+        };
         return s4() + s4() + '-' + s4() + '-' + s4() + '-' + s4() + '-' + s4() + s4() + s4();
     }
 };
